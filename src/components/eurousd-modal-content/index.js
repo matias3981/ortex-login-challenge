@@ -8,7 +8,7 @@ const EuroUsdModalContent = () => {
   const lang = window?.navigator?.language;
   
   useEffect(() => {
-    let socket = new WebSocket('ws://stream.tradingeconomics.com/?client=guest:guest');
+    let socket = new WebSocket('wss://stream.tradingeconomics.com/?client=guest:guest');
     function fetchData() {
       console.log('fetching');
       socket.onopen = () => {
