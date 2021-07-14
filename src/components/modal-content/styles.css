@@ -1,0 +1,23 @@
+.modal-content {
+  @apply w-full;
+}
+
+.modal-content .title {
+  @apply text-2xl text-center font-semibold;
+}
+
+.modal-content .caption {
+  @apply text-sm text-gray-400 font-light text-center mt-4;
+}
+
+.modal-content .forgot-password__form {
+  @apply flex flex-col mt-4;
+}
+
+.modal-content .form__input {
+  @apply rounded border-gray-300 mb-4 shadow-sm;
+}
+
+.modal-content .form__button--primary{
+  @apply xl:transition-colors xl:duration-700 p-3 rounded text-white bg-teal-400 xl:hover:bg-teal-600;
+}

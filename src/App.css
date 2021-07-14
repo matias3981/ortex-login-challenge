@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+.login {
+  @apply flex flex-row justify-center items-center h-screen px-4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login .login-container {
+  @apply bg-white w-full h-3/4 p-8 rounded-md shadow-md max-w-sm;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-container .brand {
+  @apply flex flex-row justify-center mb-16;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-container .brand img {
+  max-width: 160px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-container .login__form {
+  @apply flex flex-col items-stretch;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login__form .form__input {
+  @apply rounded border-gray-300 mb-4 shadow-sm;
+}
+
+.login__form .input-message--error {
+  @apply text-red-400 text-sm mb-2;
+}
+
+span.input-message--error:nth-child(4) {
+  @apply mb-0;
+}
+
+.login__form .form__button--primary{
+  @apply xl:transition-colors xl:duration-700 mt-6 p-3 rounded text-white bg-teal-400 xl:hover:bg-teal-600;
 }
