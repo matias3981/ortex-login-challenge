@@ -5,10 +5,10 @@ const EuroUsdModalContent = () => {
   const [euroPrice, setEuroPrice] = useState(null);
   const [dateTime, setDateTime] = useState(null);
 
-  let socket = new WebSocket('ws://stream.tradingeconomics.com/?client=guest:guest');
   const lang = window?.navigator?.language;
-
+  
   useEffect(() => {
+    let socket = new WebSocket('ws://stream.tradingeconomics.com/?client=guest:guest');
     function fetchData() {
       console.log('fetching');
       socket.onopen = () => {
@@ -19,7 +19,7 @@ const EuroUsdModalContent = () => {
         console.log('getting data');
         console.log(JSON.parse(data));
         const { dt, price } = JSON.parse(data);
-        if (price && price !== euroPrice) {
+        if (price) {
           setEuroPrice(new Intl.NumberFormat(lang, {style: 'currency', currency: 'EUR'}).format(price));
         }
         if (dt) {
@@ -38,7 +38,7 @@ const EuroUsdModalContent = () => {
     return () => {
       socket.close();
     }
-  }, []);
+  }, [lang]);
 
   return (
     <div className='eurousd-modal-content'>
