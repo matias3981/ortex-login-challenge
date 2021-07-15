@@ -1,9 +1,9 @@
 .login {
-  @apply flex flex-row justify-center items-center h-screen px-4;
+  @apply flex flex-row justify-center items-center h-full px-4;
 }
 
 .login .login-container {
-  @apply bg-white w-full h-3/4 p-8 rounded-md shadow-md max-w-sm;
+  @apply bg-white w-full h-auto p-8 rounded-md shadow-md max-w-sm;
 }
 
 .login-container .brand {
@@ -32,4 +32,8 @@ span.input-message--error:nth-child(4) {
 
 .login__form .form__button--primary{
   @apply xl:transition-colors xl:duration-700 mt-6 p-3 rounded text-white bg-teal-400 xl:hover:bg-teal-600;
+}
+
+.login__form .small-text {
+  @apply text-gray-400 text-sm mt-4 self-center hover:underline cursor-pointer;
 }

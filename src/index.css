@@ -9,7 +9,10 @@
 }
 
 @layer base {
-  body {
-    @apply font-primary bg-teal-50;
+  html, body {
+    @apply font-primary bg-teal-50 h-full;
+  }
+  div#root {
+    @apply h-full;
   }
 }

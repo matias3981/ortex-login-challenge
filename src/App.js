@@ -95,13 +95,13 @@ function App() {
           </button>
           <span
             onClick={handleModalVisibility}
-            className='text-gray-400 text-sm mt-4 self-center hover:underline cursor-pointer'
+            className='small-text'
           >
             Forgot the password?
           </span>
           <span
             onClick={handleEuroUsdModalVisibility}
-            className='text-gray-400 text-sm self-center hover:underline cursor-pointer'
+            className='small-text'
           >
             Check EURO/USD exchange rate
           </span>
