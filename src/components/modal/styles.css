@@ -7,7 +7,7 @@
 }
 
 .modal-overlay .modal {
-  @apply w-full max-w-md bg-white h-full sm:h-auto rounded-md p-8 flex flex-col;
+  @apply w-full max-w-md bg-white h-full sm:h-auto sm:rounded-md p-8 flex flex-col;
 }
 
 .modal .close-button {
